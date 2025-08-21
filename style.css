@@ -1,0 +1,539 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e0e0e0;
+  background: #181a1b;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 80px; /* Adjust this value to match your header/nav height */
+}
+a {
+  color: #7dcfff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #7dcfff;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.section {
+  padding: 3rem 0;
+}
+.bg-light {
+  background: #23272a;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0002;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+h2 {
+  font-size: 2rem;
+  color: #7dcfff;
+}
+h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+
+/* Header & Nav */
+.header {
+  background: #181a1b;
+  color: #fff;
+  box-shadow: 0 2px 16px #0004;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #7dcfff;
+}
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+.navbar a {
+  color: #e0e0e0;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.navbar a:hover,
+.navbar a:focus {
+  background: #23272a;
+  color: #7dcfff;
+  box-shadow: 0 2px 12px #7dcfff44;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #7dcfff;
+  border-radius: 2px;
+  position: relative;
+  transition: background 0.2s;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background: #7dcfff;
+}
+.hamburger::before {
+  top: -8px;
+}
+.hamburger::after {
+  top: 8px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(120deg, #23272a 0%, #181a1b 100%);
+  padding: 2.5rem 0 2rem 0;
+  border-bottom: 1px solid #23272a;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #7dcfff;
+  box-shadow: 0 4px 24px #7dcfff22;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.profile-img.large-img {
+  width: 300px;
+  height: 300px;
+  margin-right: 2rem;
+  box-shadow: 0 8px 32px #7dcfff44;
+}
+.profile-img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px #7dcfff55;
+}
+.subtitle {
+  color: #7dcfff;
+  margin-bottom: 1rem;
+}
+
+/* Make fullscreen sections fit viewport minus header */
+.fullscreen-section {
+  min-height: calc(100vh - 80px); /* 80px is header height, adjust if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+  scroll-margin-top: 80px;
+  animation: fadeIn 0.7s;
+  box-sizing: border-box;
+}
+
+/* Timeline (Education) */
+.timeline {
+  padding-left: 1rem;
+  border-left: 3px solid #7dcfff;
+}
+.timeline li {
+  margin-bottom: 1.2rem;
+}
+.timeline .date {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skills-list li {
+  background: #23272a;
+  color: #7dcfff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #7dcfff11;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.skills-list li:hover {
+  background: #7dcfff;
+  color: #181a1b;
+  box-shadow: 0 4px 16px #7dcfff44;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Center the skills section heading and logos */
+#skills {
+  text-align: center;
+}
+
+#skills h1,
+#skills h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the skills logos and make them larger */
+.skills-list.skills-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+/* Make skill icons larger and enhance hover effect */
+.skills-logos img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #23272a;
+  box-shadow: 0 6px 32px #7dcfff33, 0 2px 12px #0004;
+  transition: transform 0.35s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.35s,
+    filter 0.35s, background 0.25s;
+  padding: 18px;
+  filter: grayscale(0.15) brightness(1.08);
+  margin: 0 0.5rem;
+}
+
+.skills-logos img:hover {
+  transform: scale(1.22) rotate(-10deg);
+  box-shadow: 0 12px 40px #7dcfff99, 0 0 0 6px #7dcfff33;
+  filter: grayscale(0) brightness(1.25) drop-shadow(0 0 24px #7dcfff);
+  background: #44484e;
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.project-card {
+  background: #181a1b;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #7dcfff22;
+  padding: 1.5rem;
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 350px;
+  border: 1px solid #23272a;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-img {
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px #7dcfff22;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 32px #7dcfff55;
+  border: 1px solid #7dcfff;
+  transform: translateY(-4px) scale(1.03);
+}
+.project-card:hover .project-img {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 4px 24px #7dcfff55;
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #7dcfff;
+}
+
+/* Contact */
+#contact a {
+  color: #7dcfff;
+  font-weight: 500;
+}
+#contact a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #7dcfff;
+}
+
+/* Footer */
+.footer {
+  background: #181a1b;
+  color: #7dcfff;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  margin-top: 0;
+  border-top: 1px solid #23272a;
+}
+.footer h2 {
+  color: #7dcfff;
+  margin-bottom: 0.5rem;
+}
+
+/* Social links in footer with transition and hover effects */
+.social-links {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-links img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #23272a;
+  box-shadow: 0 2px 8px #0004;
+  transition: transform 0.25s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.25s,
+    filter 0.25s, background 0.25s;
+  filter: grayscale(0.2) brightness(1.1);
+  padding: 6px;
+}
+
+.social-links img:hover {
+  transform: scale(1.18) rotate(-8deg);
+  box-shadow: 0 8px 32px #7dcfff77, 0 0 0 4px #7dcfff33;
+  filter: grayscale(0) brightness(1.3) drop-shadow(0 0 16px #7dcfff);
+  background: #1a73e8;
+}
+
+/* Section container for realism */
+.section,
+.bg-light {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section > .container,
+.bg-light > .container {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* School logos in education */
+.education-logos li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  background: #202225;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+}
+.school-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff2;
+  box-shadow: 0 2px 8px #0002;
+  transition: transform 0.2s;
+}
+.school-logo:hover {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* General fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility: focus styles */
+a:focus,
+button:focus {
+  outline: 2px solid #7dcfff;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll for all browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modal styles for project image zoom */
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(20, 23, 27, 0.92);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+.project-modal.active {
+  display: flex;
+}
+.project-modal-content {
+  position: relative;
+  background: #23272a;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px #000a;
+  padding: 2rem;
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  box-sizing: border-box;
+}
+.project-modal-img {
+  max-width: 70vw;
+  max-height: 40vh; /* Reduce height to leave more space for text */
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #7dcfff55;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* Fix: Prevent modal content styles from affecting the close button */
+.project-modal-content h3,
+.project-modal-content p {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  word-break: break-word;
+}
+
+/* Explicitly style the close button to override inherited styles */
+.project-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #7dcfff;
+  color: #181a1b;
+  border: none;
+  border-radius: 50%;
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  box-shadow: 0 2px 8px #0004;
+}
+
+.project-modal-close:hover {
+  background: #fff;
+  color: #1a73e8;
+}
+
+.project-modal-content h3,
+.project-modal-content p {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  word-break: break-word;
+}
+.project-modal-content p {
+  margin-bottom: 0;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  overflow-wrap: break-word;
+}
+
+/* Responsive: make modal content scrollable and readable on small screens */
+@media (max-width: 700px) {
+  .project-modal-content {
+    padding: 1rem;
+    max-width: 98vw;
+    max-height: 90vh;
+  }
+  .project-modal-img {
+    max-width: 90vw;
+    max-height: 30vh;
+  }
+  .project-modal-content p {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+}

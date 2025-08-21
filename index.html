@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steven Clarke | Student Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span>Steven Clarke</span>
+        </div>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="#hero">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero + About Me Combined -->
+    <section class="hero fullscreen-section" id="hero">
+      <div class="container hero-content">
+        <img
+          src="img/steven 1x1.jpg"
+          alt="Steven Clarke"
+          class="profile-img large-img"
+        />
+        <div>
+          <h1>Steven Clarke</h1>
+          <p class="subtitle">3rd Year BSIT Student | Lemery Colleges</p>
+          <div class="about-me">
+            <h2>About Me</h2>
+            <p>
+             I am a passionate 3rd-year BSIT student at Lemery Colleges aspiring to become a Full Stack Developer, driven by my enthusiasm for web technologies, software development, and innovative problem-solving.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section bg-light fullscreen-section">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="timeline education-logos">
+          <li>
+            <img
+              src="img/lclogo.jpg"
+              alt="Lemery Colleges"
+              class="school-logo"
+            />
+            <div>
+              <strong>Lemery Colleges</strong> – BSIT, 3rd Year<br />
+              <span class="date">2023–Present</span>
+            </div>
+          </li>
+          <li>
+            <img
+              src="img/ashs.jpg"
+              alt="Agoncillo Senior High School"
+              class="school-logo"
+            />
+            <div>
+              <strong>Agoncillo Senior High School</strong> – STEM Strand<br />
+              <span class="date">2021–2023</span>
+            </div>
+          </li>
+          <li>
+            <img
+              src="img/agonnhs.jpg"
+              alt="Agoncillo National High School"
+              class="school-logo"
+            />
+            <div>
+              <strong>Agoncillo National High School</strong><br />
+              <span class="date">2017–2021</span>
+            </div>
+          </li>
+          <li>
+            <img
+              src="img/subicelem.jpg"
+              alt="Subic Elementary School"
+              class="school-logo"
+            />
+            <div>
+              <strong>Subic Elementary School</strong><br />
+              <span class="date">2010–2017</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section fullscreen-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list skills-logos">
+          <li>
+            <img
+              src="img/logo/icons8-html-5-48.png"
+              alt="HTML5"
+              title="HTML5"
+            />
+          </li>
+          <li>
+            <img src="img/logo/icons8-css-48.png" alt="CSS3" title="CSS3" />
+          </li>
+          <li>
+            <img
+              src="img/logo/icons8-javascript-50.png"
+              alt="JavaScript"
+              title="JavaScript"
+            />
+          </li>
+          <li>
+            <img src="img/logo/icons8-php-50.png" alt="PHP" title="PHP" />
+          </li>
+          <li>
+            <img src="img/logo/icons8-mysql-48.png" alt="MySQL" title="MySQL" />
+          </li>
+          <li>
+            <img
+              src="img/logo/icons8-github-50.png"
+              alt="GitHub"
+              title="GitHub"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section bg-light fullscreen-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="img/projects/ceejjoes.png"
+              alt="Ordering and Pick Up System"
+              class="project-img"
+              tabindex="0"
+              data-modal="modal1"
+            />
+            <h3>Ceej & Joe’s Brew Cafe Ordering and Pick Up System</h3>
+          </div>
+          <div class="project-card">
+            <img
+              src="img/projects/lemerycollegesguest.png"
+              alt="Lemery Colleges Logbook"
+              class="project-img"
+              tabindex="0"
+              data-modal="modal2"
+            />
+            <h3>Mini Portfolio Website</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div id="modal1" class="project-modal">
+      <div class="project-modal-content">
+        <button class="project-modal-close" aria-label="Close">&times;</button>
+        <img
+          src="img/projects/ceejjoes.png"
+          alt="Ordering and Pick Up System"
+          class="project-modal-img"
+        />
+        <h3>Ceej & Joe’s Brew Cafe Ordering and Pick Up System</h3>
+        <p>
+          Customers can explore a wide variety of food and beverages—such as coffee, milk teas, frappes, and snacks with each item displayed alongside images, descriptions, and pricing. The system allows users to simulate the ordering process by adding items to a virtual cart and checking out.
+        </p>
+      </div>
+    </div>
+    <div id="modal2" class="project-modal">
+      <div class="project-modal-content">
+        <button class="project-modal-close" aria-label="Close">&times;</button>
+        <img
+          src="img/projects/lemerycollegesguest.png"
+          alt="Lemery Colleges Logbook"
+          class="project-modal-img"
+        />
+        <h3>Lemery Colleges Guest Logbook System</h3>
+        <p>Lemery Colleges Guest Computerized Logbook System represents a modernized approach to guest management, departing from conventional paper logbooks. This system is designed to efficiently capture and store guest information through a combination of manual input and automated data acquisition methods.</p>
+      </div>
+    </div>
+
+    <!-- Footer with Contact -->
+    <footer class="footer">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:steven.clarke@email.com">steven.clarke@email.com</a>
+        </p>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/share/1EfUCobH1F/"
+            target="_blank"
+            title="Facebook"
+          >
+            <img src="img/logo/icons8-facebook-50.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/stvnclrk_?igsh=MXMyb3cwd3FtYml6bQ=="
+            target="_blank"
+            title="Instagram"
+          >
+            <img src="img/logo/icons8-instagram-50.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://github.com/yourprofile"
+            target="_blank"
+            title="GitHub"
+          >
+            <img src="img/logo/icons8-github-50.png" alt="GitHub" />
+          </a>
+        </div>
+        <p>© 2025 Steven Clarke. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Responsive nav toggle
+      const navToggle = document.querySelector(".nav-toggle");
+      const navbar = document.getElementById("navbar");
+      navToggle.addEventListener("click", () => {
+        navbar.classList.toggle("open");
+        navToggle.setAttribute(
+          "aria-expanded",
+          navbar.classList.contains("open")
+        );
+      });
+
+      // Smooth scrolling for navbar links
+      document.querySelectorAll('.navbar a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            // Close navbar on mobile after click
+            navbar.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+
+      // Project modal logic
+      document.querySelectorAll(".project-img").forEach((img) => {
+        img.addEventListener("click", function (e) {
+          e.stopPropagation(); // Prevent bubbling
+          const modalId = this.getAttribute("data-modal");
+          const modal = document.getElementById(modalId);
+          if (modal) modal.classList.add("active");
+        });
+        img.addEventListener("keypress", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            const modalId = this.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add("active");
+          }
+        });
+      });
+      document.querySelectorAll(".project-modal-close").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          this.closest(".project-modal").classList.remove("active");
+        });
+      });
+      window.addEventListener("click", function (e) {
+        document.querySelectorAll(".project-modal.active").forEach((modal) => {
+          if (e.target === modal) modal.classList.remove("active");
+        });
+      });
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document
+            .querySelectorAll(".project-modal.active")
+            .forEach((modal) => {
+              modal.classList.remove("active");
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
